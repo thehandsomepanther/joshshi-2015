@@ -1,0 +1,93 @@
+$primary-link: #1DE9B6;
+$secondary-link: #B2DFDB;
+
+$primary-font-stack: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+
+
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.intro {
+  font-family: $primary-font-stack;
+  font-size: 48px;
+  font-weight: bold;
+  height: 100vh;
+  text-align: center;
+  letter-spacing: -.15rem;
+  background-color: white;
+
+  .header {
+    padding-top: 40vh;
+    overflow-y: scroll;
+  }
+
+  .things-dummy {
+    opacity: 0;
+  }
+
+  .dropdown-wrapper {
+    /* Size and position */
+    position: relative;
+    /* Styles */
+    outline: none;
+    overflow: scroll;
+    display: inline-block;
+    height: 100vh;
+    width: 155px;
+    top: 0;
+
+    .dropdown {
+      /* Size & position */
+      position: absolute;
+      top: 0;
+      margin-top: 0;
+      padding-left: 0;
+      list-style-type: none;
+      text-align: left;
+
+      li {
+        a {
+          display: block;
+          transition: all .2s ease;
+          text-decoration: none;
+          pointer-events: none;
+          /* Hiding */
+          opacity: 0;
+          color: $secondary-link;
+        }
+
+        a:hover {
+          color: $primary-link;
+        }
+      }
+
+      li.things {
+        cursor: pointer;
+        // text-decoration: underline;
+
+        a {
+          opacity: 1;
+          color: $primary-link;
+        }
+      }
+
+      li.active {
+        a {
+          pointer-events: auto;
+          opacity: 1;
+        }
+
+        a:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.design {
+  height: 100vh;
+  background-color: #80cbc4;
+}
