@@ -1,22 +1,53 @@
 $primary-link: #1DE9B6;
 $secondary-link: #B2DFDB;
 
+$things-color: #1DE9B6;
+$design-color: #F06292;
+$code-color: #2979FF;
+$bio-color: #FFAB40;
+
 $primary-font-stack: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 
+$transition: all .2s ease;
 
 body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5vh;
+  border-bottom: 8px solid black;
+  z-index: 99;
+
+  .plus {
+    font-family: $primary-font-stack;
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    right: 0;
+    margin-top: 20px;
+    transition: $transition;
+  }
+
+  .plus:hover {
+    cursor: pointer;
+  }
 }
 
 .intro {
   font-family: $primary-font-stack;
-  font-size: 48px;
+  font-size: 45px;
   font-weight: bold;
-  height: 100vh;
+  height: 95vh;
   text-align: center;
   letter-spacing: -.15rem;
   background-color: white;
+  position: relative;
 
   .header {
     padding-top: 40vh;
@@ -30,13 +61,11 @@ body {
   .dropdown-wrapper {
     /* Size and position */
     position: relative;
+
     /* Styles */
-    outline: none;
     overflow: scroll;
     display: inline-block;
     height: 100vh;
-    width: 155px;
-    top: 0;
 
     .dropdown {
       /* Size & position */
@@ -46,11 +75,14 @@ body {
       padding-left: 0;
       list-style-type: none;
       text-align: left;
+      overflow-x: visible;
 
       li {
+        display: inline-block;
+        width: 300px;
+
         a {
-          display: block;
-          transition: all .2s ease;
+          transition: $transition;
           text-decoration: none;
           pointer-events: none;
           /* Hiding */
@@ -59,17 +91,43 @@ body {
         }
 
         a:hover {
-          color: $primary-link;
+
         }
       }
 
-      li.things {
+      .things {
         cursor: pointer;
         // text-decoration: underline;
 
         a {
           opacity: 1;
           color: $primary-link;
+        }
+      }
+
+      .design {
+        a {
+          color: $design-color;
+        }
+      }
+
+      .code {
+        a {
+          color: $code-color;
+        }
+
+        a:hover {
+          color: $design-color;
+        }
+      }
+
+      .bio {
+        a {
+          color: $bio-color;
+        }
+
+        a:hover {
+          color: $design-color;
         }
       }
 
@@ -87,7 +145,32 @@ body {
   }
 }
 
-.design {
-  height: 100vh;
-  background-color: #80cbc4;
+.content-section {
+  width: 90%;
+  margin-left: 5%;
+  min-height: 100vh;
+  position: relative;
+  margin-bottom: 5%;
+
+  h1 {
+    color: white;
+    font-family: $primary-font-stack;
+    margin-left: 10%;
+    padding-top: 2%;
+    font-size: 45px;
+    display: inline-block;
+    border-bottom: 16px solid white;
+  }
+}
+
+.design-section {
+  background-color: $design-color;
+}
+
+.code-section {
+  background-color: $code-color;
+}
+
+.bio-section {
+  background-color: $bio-color;
 }
