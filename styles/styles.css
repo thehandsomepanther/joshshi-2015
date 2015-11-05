@@ -1,3 +1,6 @@
+@font-face {
+  font-family: Circular;
+  src: url("fonts/CircularStd-Bold.otf") format("opentype"); }
 body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -11,7 +14,7 @@ body {
   border-bottom: 8px solid black;
   z-index: 99; }
   .line .plus {
-    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-family: Circular, Helvetica, "Helvetica Neue", Arial, sans-serif;
     position: absolute;
     font-weight: bold;
     font-size: 40px;
@@ -22,7 +25,7 @@ body {
     cursor: pointer; }
 
 .intro {
-  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-family: Circular, Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-size: 45px;
   font-weight: bold;
   height: 95vh;
@@ -60,7 +63,10 @@ body {
           pointer-events: none;
           /* Hiding */
           opacity: 0;
-          color: #B2DFDB; }
+          color: #B2DFDB;
+          position: relative; }
+        .intro .dropdown-wrapper .dropdown li a:hover {
+          left: 10px; }
       .intro .dropdown-wrapper .dropdown .things {
         cursor: pointer; }
         .intro .dropdown-wrapper .dropdown .things a {
@@ -70,12 +76,8 @@ body {
         color: #F06292; }
       .intro .dropdown-wrapper .dropdown .code a {
         color: #2979FF; }
-      .intro .dropdown-wrapper .dropdown .code a:hover {
-        color: #F06292; }
       .intro .dropdown-wrapper .dropdown .bio a {
         color: #FFAB40; }
-      .intro .dropdown-wrapper .dropdown .bio a:hover {
-        color: #F06292; }
       .intro .dropdown-wrapper .dropdown li.active a {
         pointer-events: auto;
         opacity: 1; }
@@ -90,7 +92,7 @@ body {
   margin-bottom: 5%; }
   .content-section h1 {
     color: white;
-    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-family: Circular, Helvetica, "Helvetica Neue", Arial, sans-serif;
     margin-left: 10%;
     padding-top: 2%;
     font-size: 45px;

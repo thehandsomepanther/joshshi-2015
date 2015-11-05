@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Circular;
+  src: url("fonts/CircularStd-Bold.otf") format("opentype");
+}
+
 $primary-link: #1DE9B6;
 $secondary-link: #B2DFDB;
 
@@ -6,7 +11,7 @@ $design-color: #F06292;
 $code-color: #2979FF;
 $bio-color: #FFAB40;
 
-$primary-font-stack: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$primary-font-stack: Circular, Helvetica, 'Helvetica Neue', Arial, sans-serif;
 
 $transition: all .2s ease;
 
@@ -88,10 +93,11 @@ body {
           /* Hiding */
           opacity: 0;
           color: $secondary-link;
+          position: relative;
         }
 
         a:hover {
-
+          left: 10px;
         }
       }
 
@@ -117,7 +123,6 @@ body {
         }
 
         a:hover {
-          color: $design-color;
         }
       }
 
@@ -127,7 +132,6 @@ body {
         }
 
         a:hover {
-          color: $design-color;
         }
       }
 
