@@ -1,34 +1,46 @@
 @font-face {
-  font-family: Circular;
+  font-family: Circular Bold;
   src: url("fonts/CircularStd-Bold.otf") format("opentype"); }
+@font-face {
+  font-family: Circular Book;
+  src: url("fonts/CircularStd-Book.otf") format("opentype"); }
 body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden;
+  width: 100vw; }
+
+#snap {
+  z-index: 100; }
 
 .line {
   position: absolute;
   width: 90%;
   margin-left: 5%;
   margin-top: 5vh;
-  border-bottom: 8px solid black;
+  border-top: 8px solid black;
   z-index: 99; }
-  .line .plus {
-    font-family: Circular, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  .line #snap #circle {
+    position: absolute;
+    right: 0; }
+  .line .plus-glyph {
+    font-family: Circular Bold, Helvetica, "Helvetica Neue", Arial, sans-serif;
     position: absolute;
     font-weight: bold;
     font-size: 40px;
     right: 0;
     margin-top: 20px;
-    transition: all 0.2s ease; }
-  .line .plus:hover {
+    transition: all 0.2s ease;
+    color: #FFAB40; }
+  .line .plus-glyph:hover {
     cursor: pointer; }
 
 .intro {
-  font-family: Circular, Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-family: Circular Bold, Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-size: 45px;
   font-weight: bold;
-  height: 95vh;
+  height: 85vh;
   text-align: center;
   letter-spacing: -.15rem;
   background-color: white;
@@ -42,9 +54,11 @@ body {
     /* Size and position */
     position: relative;
     /* Styles */
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     display: inline-block;
-    height: 100vh; }
+    height: 100vh;
+    width: 155px; }
     .intro .dropdown-wrapper .dropdown {
       /* Size & position */
       position: absolute;
@@ -87,17 +101,50 @@ body {
 .content-section {
   width: 90%;
   margin-left: 5%;
-  min-height: 100vh;
+  min-height: 90vh;
   position: relative;
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  margin-top: 5%; }
   .content-section h1 {
     color: white;
-    font-family: Circular, Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-family: Circular Bold, Helvetica, "Helvetica Neue", Arial, sans-serif;
     margin-left: 10%;
     padding-top: 2%;
     font-size: 45px;
     display: inline-block;
     border-bottom: 16px solid white; }
+  .content-section .project-container {
+    padding-bottom: 5%;
+    margin-left: 10%; }
+    .content-section .project-container .info-container {
+      width: 20%;
+      display: inline-block;
+      vertical-align: top; }
+      .content-section .project-container .info-container .info-header {
+        font-family: Circular Book, Helvetica, "Helvetica Neue", Arial, sans-serif;
+        font-weight: normal;
+        font-size: 40px;
+        margin-top: 0;
+        color: white; }
+        .content-section .project-container .info-container .info-header a {
+          color: white;
+          text-decoration: none; }
+        .content-section .project-container .info-container .info-header a:hover {
+          text-decoration: line-through; }
+      .content-section .project-container .info-container .header-left:after {
+        content: "\219D"; }
+      .content-section .project-container .info-container .header-right:before {
+        content: "\219C"; }
+      .content-section .project-container .info-container .info-description {
+        font-family: "Inconsolata";
+        color: white; }
+    .content-section .project-container .image-container {
+      width: 60%;
+      display: inline-block; }
+      .content-section .project-container .image-container img {
+        position: relative;
+        width: 100%;
+        transition: all .2s ease; }
 
 .design-section {
   background-color: #F06292; }
@@ -106,6 +153,16 @@ body {
   background-color: #2979FF; }
 
 .bio-section {
-  background-color: #FFAB40; }
+  background-color: #FFAB40;
+  display: inline-block;
+  position: fixed;
+  left: 95%;
+  margin-right: 5%;
+  min-height: 80vh;
+  transition: all .5s ease;
+  z-index: 98; }
+
+.bio-section:hover {
+  left: 0%; }
 
 /*# sourceMappingURL=styles.css.map */

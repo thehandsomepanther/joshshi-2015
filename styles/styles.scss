@@ -1,7 +1,13 @@
 @font-face {
-  font-family: Circular;
+  font-family: Circular Bold;
   src: url("fonts/CircularStd-Bold.otf") format("opentype");
 }
+
+@font-face {
+  font-family: Circular Book;
+  src: url("fonts/CircularStd-Book.otf") format("opentype");
+}
+
 
 $primary-link: #1DE9B6;
 $secondary-link: #B2DFDB;
@@ -11,7 +17,8 @@ $design-color: #F06292;
 $code-color: #2979FF;
 $bio-color: #FFAB40;
 
-$primary-font-stack: Circular, Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$primary-font-stack: Circular Bold, Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$secondary-font-stack: Circular Book, Helvetica, 'Helvetica Neue', Arial, sans-serif;
 
 $transition: all .2s ease;
 
@@ -19,6 +26,12 @@ body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   position: relative;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+#snap {
+  z-index: 100;
 }
 
 .line {
@@ -26,10 +39,15 @@ body {
   width: 90%;
   margin-left: 5%;
   margin-top: 5vh;
-  border-bottom: 8px solid black;
+  border-top: 8px solid black;
   z-index: 99;
 
-  .plus {
+  #snap #circle {
+    position: absolute;
+    right: 0;
+  }
+
+  .plus-glyph {
     font-family: $primary-font-stack;
     position: absolute;
     font-weight: bold;
@@ -37,9 +55,10 @@ body {
     right: 0;
     margin-top: 20px;
     transition: $transition;
+    color: $bio-color;
   }
 
-  .plus:hover {
+  .plus-glyph:hover {
     cursor: pointer;
   }
 }
@@ -48,7 +67,7 @@ body {
   font-family: $primary-font-stack;
   font-size: 45px;
   font-weight: bold;
-  height: 95vh;
+  height: 85vh;
   text-align: center;
   letter-spacing: -.15rem;
   background-color: white;
@@ -68,9 +87,11 @@ body {
     position: relative;
 
     /* Styles */
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     display: inline-block;
     height: 100vh;
+    width: 155px;
 
     .dropdown {
       /* Size & position */
@@ -152,9 +173,10 @@ body {
 .content-section {
   width: 90%;
   margin-left: 5%;
-  min-height: 100vh;
+  min-height: 90vh;
   position: relative;
   margin-bottom: 5%;
+  margin-top: 5%;
 
   h1 {
     color: white;
@@ -164,6 +186,64 @@ body {
     font-size: 45px;
     display: inline-block;
     border-bottom: 16px solid white;
+  }
+
+  .project-container {
+    padding-bottom: 5%;
+    margin-left: 10%;
+
+    .info-container {
+      width: 20%;
+      display: inline-block;
+      vertical-align: top;
+
+      .info-header {
+        font-family: $secondary-font-stack;
+        font-weight: normal;
+        font-size: 40px;
+        margin-top: 0;
+        color: white;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: line-through;
+        }
+
+      }
+
+      .header-left:after{
+        content: "\219D";
+      }
+
+      .header-right:before{
+        content: "\219C";
+      }
+
+      .info-description {
+        font-family: "Inconsolata";
+        color: white;
+
+      }
+    }
+
+    .image-container {
+      width: 60%;
+      display: inline-block;
+
+      img {
+        position: relative;
+        width: 100%;
+        transition: all .2s ease;
+      }
+
+      img:hover {
+      }
+    }
+
   }
 }
 
@@ -177,4 +257,15 @@ body {
 
 .bio-section {
   background-color: $bio-color;
+  display: inline-block;
+  position: fixed;
+  left: 95%;
+  margin-right: 5%;
+  min-height: 80vh;
+  transition: all .5s ease;
+  z-index: 98;
+}
+
+.bio-section:hover {
+  left: 0%;
 }

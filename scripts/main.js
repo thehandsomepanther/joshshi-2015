@@ -12,14 +12,6 @@ $(document).ready(function() {
     dropUp();
   });
 
-  // var lastScrollTop = 0;
-  // $(window).scroll(function(event){
-  //   var st = $(this).scrollTop();
-  //
-  //   $('.dropdown').css("top", -st + "px");
-  //   lastScrollTop = st;
-  // });
-
 });
 
 function dropDown() {

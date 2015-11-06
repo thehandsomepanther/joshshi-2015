@@ -16,8 +16,28 @@
 
 <body>
   <div class="line">
-    <span class='plus'>+</span>
+    <span class='plus-glyph'>+</span>
+    <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" id='plus'>
+      <title>Plus</title>
+      <style type="text/css">
+        .st0 {
+          fill: #FAAA43;
+        }
+      </style>
+      <g id="Crossbar">
+        <rect x="10.2" y="17.8" class="st0" width="19.6" height="4.4" />
+      </g>
+      <g id="Bottombar">
+        <rect id='actualbar' x="17.8" y="14.2" class="st0" width="4.5" height="15.8" />
+      </g>
+      <g id="Topbar">
+        <rect x="17.8" y="10" class="st0" width="4.5" height="15.8" />
+      </g>
+    </svg> -->
   </div>
+  <section class='bio-section content-section'>
+    <h1>a bio.</h1>
+  </section>
   <section class="intro">
     <div class="header">
       <span class="josh-shi-makes">
@@ -27,22 +47,43 @@
         <span class='things-dummy'>things.</span>
         <ul class='dropdown'>
           <li class='things'><a href="#">things.</a></li>
-          <li class='design'><a href="#design-section">design.</a></li>
           <li class='code'><a href="#code-section">code.</a></li>
+          <li class='design'><a href="#design-section">design.</a></li>
           <li class='bio'><a href="#bio-section">a bio.</a></li>
         </ul>
       </span>
     </div>
   </section>
+  <section class='code-section content-section'>
+    <h1>code.</h1>
+    <div class="project-container">
+      <div class="info-container">
+        <h2 class='info-header header-left' target="_blank"><a href="http://swaat.ch">swaatch</a></h2>
+        <p class='info-description'>
+          here's a description
+        </p>
+      </div>
+      <div class="image-container">
+        <a href="http://swaat.ch" target="_blank"><img src="images/swaatch-image.png" alt="" /></a>
+      </div>
+    </div>
+    <div class="project-container">
+      <div class="image-container">
+        <a href="http://learn.knightlab.com"><img src="images/learn-image.png" target="_blank" /></a>
+      </div>
+      <div class="info-container">
+        <h2 class='info-header header-right'><a href="http://learn.knightlab.com" target="_blank">learn.<br>knightlab</a></h2>
+        <p class='info-description'>
+          here's a description
+        </p>
+      </div>
+    </div>
+  </section>
   <section class='design-section content-section'>
     <h1>design.</h1>
   </section>
-  <section class='code-section content-section'>
-    <h1>code.</h1>
-  </section>
-  <section class='bio-section content-section'>
-    <h1>a bio.</h1>
-  </section>
+  <script src="scripts/snap.svg-min.js"></script>
+  <script src="scripts/animations.js"></script>
 </body>
 
 </html>
