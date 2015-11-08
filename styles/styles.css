@@ -35,6 +35,9 @@ body {
     height: 100vh;
     width: 155px;
     top: -114px; }
+    @media screen and (max-width: 768px) {
+      .intro .dropdown-wrapper {
+        text-align: center; } }
     .intro .dropdown-wrapper .dropdown {
       /* Size & position */
       position: absolute;
@@ -96,10 +99,16 @@ body {
     .content-section .project-container .spacer {
       width: 10%;
       display: inline-block; }
+      @media screen and (max-width: 768px) {
+        .content-section .project-container .spacer {
+          width: 0%; } }
     .content-section .project-container .info-container {
       width: 20%;
       display: inline-block;
       vertical-align: top; }
+      @media screen and (max-width: 768px) {
+        .content-section .project-container .info-container {
+          width: 90%; } }
       .content-section .project-container .info-container .info-header {
         font-family: Circular Book, Helvetica, "Helvetica Neue", Arial, sans-serif;
         font-weight: normal;
@@ -107,6 +116,9 @@ body {
         margin-top: 0;
         color: white;
         line-height: 2.4rem; }
+        @media screen and (max-width: 768px) {
+          .content-section .project-container .info-container .info-header {
+            margin-bottom: 0; } }
         .content-section .project-container .info-container .info-header a {
           color: white;
           text-decoration: none; }
@@ -126,6 +138,9 @@ body {
     .content-section .project-container .image-container {
       width: 60%;
       display: inline-block; }
+      @media screen and (max-width: 768px) {
+        .content-section .project-container .image-container {
+          width: 90%; } }
       .content-section .project-container .image-container img {
         position: relative;
         width: 100%;
@@ -145,6 +160,9 @@ body {
   margin-bottom: 0; }
   .bio-section .info-container {
     width: 50% !important; }
+    @media screen and (max-width: 768px) {
+      .bio-section .info-container {
+        width: 90% !important; } }
     .bio-section .info-container .info-description a {
       color: white;
       transition: all 0.2s ease; }
