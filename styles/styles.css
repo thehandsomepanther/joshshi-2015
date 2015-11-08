@@ -134,7 +134,9 @@ body {
         content: "\219C"; }
       .content-section .project-container .info-container .info-description {
         font-family: "Inconsolata", Courier, monospace;
-        color: white; }
+        color: white;
+        font-size: 1.2rem;
+        line-height: 1.5rem; }
     .content-section .project-container .image-container {
       width: 60%;
       display: inline-block; }
