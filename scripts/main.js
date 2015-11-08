@@ -20,14 +20,18 @@ var bio = false;
 this.previous_active = 0;
 var count = 0;
 
-window.onload = function() {
-  // var page_start = $('.code-section').offset().top + .05 * .9 * $(window).width() - $(window).height();
-  var page_start = $('.intro').offset().top - .05 * $(window).height();
-  console.log(page_start);
-  window.scroll(0, page_start);
-};
+// document.onload = function() {
+//   // var page_start = $('.code-section').offset().top + .05 * .9 * $(window).width() - $(window).height();
+//   var page_start = $('.intro').offset().top - .05 * $(window).height();
+//   console.log(page_start);
+//   window.scroll(0, page_start);
+// };
 
 $(document).ready(function() {
+  $('html, body').animate({
+    scrollTop: $('.intro').offset().top - .05 * $(window).height()
+  }, 0);
+
   $('.josh-shi-makes').click(function() {
     $('.design').addClass('active');
   });
@@ -67,7 +71,7 @@ $(document).ready(function() {
   $('.bio').click(function() {
     shiftDropdown(1);
     $(this).addClass('active');
-    // $('body').scrollTo(0);
+    $('body').scrollTo(0);
   });
 
   $('.things').click(function() {
@@ -78,13 +82,13 @@ $(document).ready(function() {
   $('.code').click(function() {
     shiftDropdown(3);
     $(this).addClass('active');
-    // $('body').scrollTo($('.code-section').offset().top -50);
+    $('body').scrollTo($('.code-section').offset().top -50);
   });
 
   $('.design').click(function() {
     shiftDropdown(4);
     $(this).addClass('active');
-    // $('body').scrollTo($('.design-section').offset().top -50);
+    $('body').scrollTo($('.design-section').offset().top -50);
   });
 
 });

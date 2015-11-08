@@ -31,40 +31,6 @@ body {
   width: 100vw;
 }
 
-#snap {
-  z-index: 100;
-}
-
-.line {
-  position: absolute;
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 5vh;
-  border-top: 8px solid black;
-  z-index: 99;
-
-  #snap #circle {
-    position: absolute;
-    right: 0;
-  }
-
-  .plus-glyph {
-    font-family: $primary-font-stack;
-    position: absolute;
-    font-weight: bold;
-    font-size: 40px;
-    right: 10px;
-    margin-top: 20px;
-    transition: $transition;
-    color: $bio-color;
-    z-index: 99;
-  }
-
-  .plus-glyph:hover {
-    cursor: pointer;
-  }
-}
-
 .intro {
   font-family: $primary-font-stack;
   font-size: 45px;
@@ -272,19 +238,21 @@ body {
 .bio-section {
   background-color: $bio-color;
   margin-bottom: 0;
-  // display: inline-block;
-  // position: fixed;
-  // left: 95%;
-  // margin-right: 5%;
-  // min-height: 80vh;
-  // transition: all .5s ease;
-  // z-index: 98;
 
   .info-container {
     width: 50% !important;
-  }
-}
 
-.bio-section:hover {
-  left: 0%;
+    .info-description {
+      a {
+        color: white;
+        transition: $transition;
+      }
+
+      a:hover {
+        text-decoration: none;
+        background-color: white;
+        color: $bio-color;
+      }
+    }
+  }
 }

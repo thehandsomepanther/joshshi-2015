@@ -11,32 +11,6 @@ body {
   overflow-x: hidden;
   width: 100vw; }
 
-#snap {
-  z-index: 100; }
-
-.line {
-  position: absolute;
-  width: 90%;
-  margin-left: 5%;
-  margin-top: 5vh;
-  border-top: 8px solid black;
-  z-index: 99; }
-  .line #snap #circle {
-    position: absolute;
-    right: 0; }
-  .line .plus-glyph {
-    font-family: Circular Bold, Helvetica, "Helvetica Neue", Arial, sans-serif;
-    position: absolute;
-    font-weight: bold;
-    font-size: 40px;
-    right: 10px;
-    margin-top: 20px;
-    transition: all 0.2s ease;
-    color: #FFAB40;
-    z-index: 99; }
-  .line .plus-glyph:hover {
-    cursor: pointer; }
-
 .intro {
   font-family: Circular Bold, Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-size: 45px;
@@ -171,8 +145,12 @@ body {
   margin-bottom: 0; }
   .bio-section .info-container {
     width: 50% !important; }
-
-.bio-section:hover {
-  left: 0%; }
+    .bio-section .info-container .info-description a {
+      color: white;
+      transition: all 0.2s ease; }
+    .bio-section .info-container .info-description a:hover {
+      text-decoration: none;
+      background-color: white;
+      color: #FFAB40; }
 
 /*# sourceMappingURL=styles.css.map */
