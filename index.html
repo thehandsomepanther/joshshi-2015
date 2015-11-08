@@ -11,13 +11,13 @@
   <link rel="stylesheet" href="styles/styles.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="scripts/main.js"></script>
-  <link rel='shortcut icon' type='image/png' href='images/favicon (1).ico' />
+  <link rel='shortcut icon' type='image/png' href='images/favicon-1.ico' />
 </head>
 
 <body>
-  <div class="line">
+  <!-- <div class="line">
     <span class='plus-glyph'>+</span>
-    <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" id='plus'>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" id='plus'>
       <title>Plus</title>
       <style type="text/css">
         .st0 {
@@ -33,10 +33,30 @@
       <g id="Topbar">
         <rect x="17.8" y="10" class="st0" width="4.5" height="15.8" />
       </g>
-    </svg> -->
-  </div>
+    </svg>
+  </div> -->
   <section class='bio-section content-section'>
-    <h1>a bio.</h1>
+    <h1><a href="#">a bio.</a></h1>
+    <div class="project-container">
+      <div class="info-container">
+        <h2 class='info-header'>me</h2>
+        <p class='info-description'>
+          hi, i'm a computer science student at northwestern university. i put some of the stuff that i make up here.
+        </p>
+      </div>
+      <div class="info-container">
+        <h2 class='info-header header-bio'><a href="images/shi-joshua-resume.pdf" target="_blank">resume</a></h2>
+      </div>
+      <div class="info-container">
+        <h2 class='info-header header-left'><a href="https://twitter.com/joshshimakes" target="_blank">tweet machine</a></h2>
+      </div>
+      <div class="info-container">
+        <h2 class='info-header header-left'><a href="http://learn.knightlab.com" target="_blank">gitsblub</a></h2>
+      </div>
+      <div class="info-container">
+        <h2 class='info-header header-left'><a href="http://learn.knightlab.com" target="_blank">zoom and behance</a></h2>
+      </div>
+    </div>
   </section>
   <section class="intro">
     <div class="header">
@@ -46,41 +66,55 @@
       <span class='dropdown-wrapper' id='dropdown-wrapper'>
         <span class='things-dummy'>things.</span>
         <ul class='dropdown'>
-          <li class='things'><a href="#">things.</a></li>
+          <li class='bio'><a href="#bio-section">a bio.</a></li>
+          <li class='things active'><a>things.</a></li>
           <li class='code'><a href="#code-section">code.</a></li>
           <li class='design'><a href="#design-section">design.</a></li>
-          <li class='bio'><a href="#bio-section">a bio.</a></li>
         </ul>
       </span>
     </div>
   </section>
   <section class='code-section content-section'>
-    <h1>code.</h1>
+    <h1><a href="https://github.com/thehandsomepanther" target='_blank'>code.</a></h1>
     <div class="project-container">
       <div class="info-container">
         <h2 class='info-header header-left' target="_blank"><a href="http://swaat.ch">swaatch</a></h2>
         <p class='info-description'>
-          here's a description
+          a task management app built in the mean stack i made as a solo project that allows you to create and manage tasks based on urgency and importance
         </p>
       </div>
+      <div class="spacer"></div>
       <div class="image-container">
-        <a href="http://swaat.ch" target="_blank"><img src="images/swaatch-image.png" alt="" /></a>
+        <a href="http://swaat.ch" target="_blank"><img src="images/swaatch.png" alt="" /></a>
       </div>
     </div>
     <div class="project-container">
       <div class="image-container">
-        <a href="http://learn.knightlab.com"><img src="images/learn-image.png" target="_blank" /></a>
+        <a href="http://wildhacks.org"><img src="images/wildhacks.png" target="_blank" /></a>
       </div>
+      <div class="spacer"></div>
       <div class="info-container">
-        <h2 class='info-header header-right'><a href="http://learn.knightlab.com" target="_blank">learn.<br>knightlab</a></h2>
+        <h2 class='info-header header-right'><a href="http://wildhacks.org" target="_blank">wildhacks</a></h2>
         <p class='info-description'>
-          here's a description
+          i do the front-end and branding for wildhacks, our hackathon here at northwestern university
         </p>
       </div>
     </div>
   </section>
   <section class='design-section content-section'>
-    <h1>design.</h1>
+    <h1><a href="https://www.behance.net/joshshi" target='_blank'>design.</a></h1>
+    <div class="project-container">
+      <div class="image-container">
+        <a href="http://learn.knightlab.com"><img src="images/learn.png" target="_blank" /></a>
+      </div>
+      <div class="spacer"></div>
+      <div class="info-container">
+        <h2 class='info-header header-right'><a href="http://learn.knightlab.com" target="_blank">learn.<br>knightlab</a></h2>
+        <p class='info-description'>
+          online learning website i helped prototype and perform user testing on as a student fellow at knight lab
+        </p>
+      </div>
+    </div>
   </section>
   <script src="scripts/snap.svg-min.js"></script>
   <script src="scripts/animations.js"></script>

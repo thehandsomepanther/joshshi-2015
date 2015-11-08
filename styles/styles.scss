@@ -19,6 +19,7 @@ $bio-color: #FFAB40;
 
 $primary-font-stack: Circular Bold, Helvetica, 'Helvetica Neue', Arial, sans-serif;
 $secondary-font-stack: Circular Book, Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$copy-font-stack: "Inconsolata", Courier, monospace;
 
 $transition: all .2s ease;
 
@@ -52,10 +53,11 @@ body {
     position: absolute;
     font-weight: bold;
     font-size: 40px;
-    right: 0;
+    right: 10px;
     margin-top: 20px;
     transition: $transition;
     color: $bio-color;
+    z-index: 99;
   }
 
   .plus-glyph:hover {
@@ -67,14 +69,14 @@ body {
   font-family: $primary-font-stack;
   font-size: 45px;
   font-weight: bold;
-  height: 85vh;
+  height: 90vh;
   text-align: center;
   letter-spacing: -.15rem;
   background-color: white;
   position: relative;
 
   .header {
-    padding-top: 40vh;
+    padding-top: 35vh;
     overflow-y: scroll;
   }
 
@@ -92,11 +94,11 @@ body {
     display: inline-block;
     height: 100vh;
     width: 155px;
+    top: -114px;
 
     .dropdown {
       /* Size & position */
       position: absolute;
-      top: 0;
       margin-top: 0;
       padding-left: 0;
       list-style-type: none;
@@ -122,12 +124,19 @@ body {
         }
       }
 
-      .things {
-        cursor: pointer;
-        // text-decoration: underline;
-
+      li.active {
         a {
-          opacity: 1;
+          pointer-events: auto;
+          opacity: 1 !important;
+        }
+
+        a:hover {
+          cursor: pointer;
+        }
+      }
+
+      .things {
+        a {
           color: $primary-link;
         }
       }
@@ -142,28 +151,11 @@ body {
         a {
           color: $code-color;
         }
-
-        a:hover {
-        }
       }
 
       .bio {
         a {
           color: $bio-color;
-        }
-
-        a:hover {
-        }
-      }
-
-      li.active {
-        a {
-          pointer-events: auto;
-          opacity: 1;
-        }
-
-        a:hover {
-          cursor: pointer;
         }
       }
     }
@@ -179,18 +171,30 @@ body {
   margin-top: 5%;
 
   h1 {
-    color: white;
     font-family: $primary-font-stack;
     margin-left: 10%;
     padding-top: 2%;
     font-size: 45px;
     display: inline-block;
     border-bottom: 16px solid white;
+    letter-spacing: -.08rem;
+
+    a {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      transition: $transition;
+    }
   }
 
   .project-container {
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     margin-left: 10%;
+
+    .spacer {
+      width: 10%;
+      display: inline-block;
+    }
 
     .info-container {
       width: 20%;
@@ -203,6 +207,7 @@ body {
         font-size: 40px;
         margin-top: 0;
         color: white;
+        line-height: 2.4rem;
 
         a {
           color: white;
@@ -210,13 +215,21 @@ body {
         }
 
         a:hover {
-          text-decoration: line-through;
+          text-decoration: underline;
         }
 
       }
 
+      .header-bio:after {
+        content: "\21AF";
+      }
+
       .header-left:after{
         content: "\219D";
+      }
+
+      .header-right {
+        text-indent: -1.78rem;
       }
 
       .header-right:before{
@@ -224,9 +237,8 @@ body {
       }
 
       .info-description {
-        font-family: "Inconsolata";
+        font-family: $copy-font-stack;
         color: white;
-
       }
     }
 
@@ -237,10 +249,11 @@ body {
       img {
         position: relative;
         width: 100%;
-        transition: all .2s ease;
+        transition: $transition;
       }
 
       img:hover {
+        box-shadow: 10px 10px 0px #333;
       }
     }
 
@@ -253,17 +266,23 @@ body {
 
 .code-section {
   background-color: $code-color;
+  margin-top: 0;
 }
 
 .bio-section {
   background-color: $bio-color;
-  display: inline-block;
-  position: fixed;
-  left: 95%;
-  margin-right: 5%;
-  min-height: 80vh;
-  transition: all .5s ease;
-  z-index: 98;
+  margin-bottom: 0;
+  // display: inline-block;
+  // position: fixed;
+  // left: 95%;
+  // margin-right: 5%;
+  // min-height: 80vh;
+  // transition: all .5s ease;
+  // z-index: 98;
+
+  .info-container {
+    width: 50% !important;
+  }
 }
 
 .bio-section:hover {

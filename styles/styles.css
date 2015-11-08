@@ -29,10 +29,11 @@ body {
     position: absolute;
     font-weight: bold;
     font-size: 40px;
-    right: 0;
+    right: 10px;
     margin-top: 20px;
     transition: all 0.2s ease;
-    color: #FFAB40; }
+    color: #FFAB40;
+    z-index: 99; }
   .line .plus-glyph:hover {
     cursor: pointer; }
 
@@ -40,13 +41,13 @@ body {
   font-family: Circular Bold, Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-size: 45px;
   font-weight: bold;
-  height: 85vh;
+  height: 90vh;
   text-align: center;
   letter-spacing: -.15rem;
   background-color: white;
   position: relative; }
   .intro .header {
-    padding-top: 40vh;
+    padding-top: 35vh;
     overflow-y: scroll; }
   .intro .things-dummy {
     opacity: 0; }
@@ -58,11 +59,11 @@ body {
     overflow-y: scroll;
     display: inline-block;
     height: 100vh;
-    width: 155px; }
+    width: 155px;
+    top: -114px; }
     .intro .dropdown-wrapper .dropdown {
       /* Size & position */
       position: absolute;
-      top: 0;
       margin-top: 0;
       padding-left: 0;
       list-style-type: none;
@@ -81,22 +82,19 @@ body {
           position: relative; }
         .intro .dropdown-wrapper .dropdown li a:hover {
           left: 10px; }
-      .intro .dropdown-wrapper .dropdown .things {
+      .intro .dropdown-wrapper .dropdown li.active a {
+        pointer-events: auto;
+        opacity: 1 !important; }
+      .intro .dropdown-wrapper .dropdown li.active a:hover {
         cursor: pointer; }
-        .intro .dropdown-wrapper .dropdown .things a {
-          opacity: 1;
-          color: #1DE9B6; }
+      .intro .dropdown-wrapper .dropdown .things a {
+        color: #1DE9B6; }
       .intro .dropdown-wrapper .dropdown .design a {
         color: #F06292; }
       .intro .dropdown-wrapper .dropdown .code a {
         color: #2979FF; }
       .intro .dropdown-wrapper .dropdown .bio a {
         color: #FFAB40; }
-      .intro .dropdown-wrapper .dropdown li.active a {
-        pointer-events: auto;
-        opacity: 1; }
-      .intro .dropdown-wrapper .dropdown li.active a:hover {
-        cursor: pointer; }
 
 .content-section {
   width: 90%;
@@ -106,16 +104,24 @@ body {
   margin-bottom: 5%;
   margin-top: 5%; }
   .content-section h1 {
-    color: white;
     font-family: Circular Bold, Helvetica, "Helvetica Neue", Arial, sans-serif;
     margin-left: 10%;
     padding-top: 2%;
     font-size: 45px;
     display: inline-block;
-    border-bottom: 16px solid white; }
+    border-bottom: 16px solid white;
+    letter-spacing: -.08rem; }
+    .content-section h1 a {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      transition: all 0.2s ease; }
   .content-section .project-container {
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     margin-left: 10%; }
+    .content-section .project-container .spacer {
+      width: 10%;
+      display: inline-block; }
     .content-section .project-container .info-container {
       width: 20%;
       display: inline-block;
@@ -125,18 +131,23 @@ body {
         font-weight: normal;
         font-size: 40px;
         margin-top: 0;
-        color: white; }
+        color: white;
+        line-height: 2.4rem; }
         .content-section .project-container .info-container .info-header a {
           color: white;
           text-decoration: none; }
         .content-section .project-container .info-container .info-header a:hover {
-          text-decoration: line-through; }
+          text-decoration: underline; }
+      .content-section .project-container .info-container .header-bio:after {
+        content: "\21AF"; }
       .content-section .project-container .info-container .header-left:after {
         content: "\219D"; }
+      .content-section .project-container .info-container .header-right {
+        text-indent: -1.78rem; }
       .content-section .project-container .info-container .header-right:before {
         content: "\219C"; }
       .content-section .project-container .info-container .info-description {
-        font-family: "Inconsolata";
+        font-family: "Inconsolata", Courier, monospace;
         color: white; }
     .content-section .project-container .image-container {
       width: 60%;
@@ -144,23 +155,22 @@ body {
       .content-section .project-container .image-container img {
         position: relative;
         width: 100%;
-        transition: all .2s ease; }
+        transition: all 0.2s ease; }
+      .content-section .project-container .image-container img:hover {
+        box-shadow: 10px 10px 0px #333; }
 
 .design-section {
   background-color: #F06292; }
 
 .code-section {
-  background-color: #2979FF; }
+  background-color: #2979FF;
+  margin-top: 0; }
 
 .bio-section {
   background-color: #FFAB40;
-  display: inline-block;
-  position: fixed;
-  left: 95%;
-  margin-right: 5%;
-  min-height: 80vh;
-  transition: all .5s ease;
-  z-index: 98; }
+  margin-bottom: 0; }
+  .bio-section .info-container {
+    width: 50% !important; }
 
 .bio-section:hover {
   left: 0%; }
