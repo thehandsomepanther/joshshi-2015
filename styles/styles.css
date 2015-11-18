@@ -137,6 +137,12 @@ body {
         color: white;
         font-size: 1.2rem;
         line-height: 1.5rem; }
+        .content-section .project-container .info-container .info-description a {
+          color: white;
+          transition: all 0.2s ease; }
+        .content-section .project-container .info-container .info-description a:hover {
+          text-decoration: none;
+          background-color: white; }
     .content-section .project-container .image-container {
       width: 60%;
       display: inline-block; }
@@ -152,10 +158,14 @@ body {
 
 .design-section {
   background-color: #F06292; }
+  .design-section .info-description a:hover {
+    color: #F06292 !important; }
 
 .code-section {
   background-color: #2979FF;
   margin-top: 0; }
+  .code-section .info-description a:hover {
+    color: #2979FF !important; }
 
 .bio-section {
   background-color: #FFAB40;
@@ -165,12 +175,7 @@ body {
     @media screen and (max-width: 768px) {
       .bio-section .info-container {
         width: 90% !important; } }
-    .bio-section .info-container .info-description a {
-      color: white;
-      transition: all 0.2s ease; }
     .bio-section .info-container .info-description a:hover {
-      text-decoration: none;
-      background-color: white;
       color: #FFAB40; }
 
 /*# sourceMappingURL=styles.css.map */

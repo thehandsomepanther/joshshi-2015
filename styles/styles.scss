@@ -224,7 +224,18 @@ body {
         font-family: $copy-font-stack;
         color: white;
         font-size: 1.2rem;
-        line-height: 1.5rem
+        line-height: 1.5rem;
+
+        a {
+          color: white;
+          transition: $transition;
+        }
+
+        a:hover {
+          text-decoration: none;
+          background-color: white;
+        }
+
       }
     }
 
@@ -253,11 +264,23 @@ body {
 
 .design-section {
   background-color: $design-color;
+
+  .info-description {
+     a:hover {
+       color: $design-color !important;
+     }
+  }
 }
 
 .code-section {
   background-color: $code-color;
   margin-top: 0;
+
+  .info-description {
+     a:hover {
+       color: $code-color !important;
+     }
+  }
 }
 
 .bio-section {
@@ -272,16 +295,9 @@ body {
     }
 
     .info-description {
-      a {
-        color: white;
-        transition: $transition;
-      }
-
-      a:hover {
-        text-decoration: none;
-        background-color: white;
-        color: $bio-color;
-      }
+       a:hover {
+         color: $bio-color;
+       }
     }
   }
 }
