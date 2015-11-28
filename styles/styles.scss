@@ -8,6 +8,13 @@
   src: url("fonts/CircularStd-Book.otf") format("opentype");
 }
 
+@mixin anim {
+  -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
 
 $primary-link: #1DE9B6;
 $secondary-link: #B2DFDB;
@@ -22,7 +29,6 @@ $secondary-font-stack: Circular Book, Helvetica, 'Helvetica Neue', Arial, sans-s
 $copy-font-stack: "Inconsolata", Courier, monospace;
 
 $break-medium: 768px;
-$transition: all .2s ease;
 
 body {
   margin: 0 0 0 0;
@@ -45,6 +51,10 @@ body {
   .header {
     padding-top: 35vh;
     overflow-y: scroll;
+
+    .josh-shi-makes {
+      vertical-align: top;
+    }
   }
 
   .things-dummy {
@@ -82,7 +92,7 @@ body {
         width: 300px;
 
         a {
-          transition: $transition;
+          @include anim;
           text-decoration: none;
           pointer-events: none;
           /* Hiding */
@@ -155,7 +165,7 @@ body {
       position: relative;
       color: white;
       text-decoration: none;
-      transition: $transition;
+      @include anim;
     }
   }
 
@@ -228,7 +238,7 @@ body {
 
         a {
           color: white;
-          transition: $transition;
+          @include anim;
         }
 
         a:hover {
@@ -250,7 +260,7 @@ body {
       img {
         position: relative;
         width: 100%;
-        transition: $transition;
+        @include anim;
       }
 
       img:hover {

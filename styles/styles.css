@@ -23,6 +23,8 @@ body {
   .intro .header {
     padding-top: 35vh;
     overflow-y: scroll; }
+    .intro .header .josh-shi-makes {
+      vertical-align: top; }
   .intro .things-dummy {
     opacity: 0; }
   .intro .dropdown-wrapper {
@@ -50,7 +52,10 @@ body {
         display: inline-block;
         width: 300px; }
         .intro .dropdown-wrapper .dropdown li a {
-          transition: all 0.2s ease;
+          -webkit-transition: all .2s ease;
+          -moz-transition: all .2s ease;
+          -o-transition: all .2s ease;
+          transition: all .2s ease;
           text-decoration: none;
           pointer-events: none;
           /* Hiding */
@@ -92,7 +97,10 @@ body {
       position: relative;
       color: white;
       text-decoration: none;
-      transition: all 0.2s ease; }
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease; }
   .content-section .project-container {
     padding-bottom: 10%;
     margin-left: 10%; }
@@ -139,7 +147,10 @@ body {
         line-height: 1.5rem; }
         .content-section .project-container .info-container .info-description a {
           color: white;
-          transition: all 0.2s ease; }
+          -webkit-transition: all .2s ease;
+          -moz-transition: all .2s ease;
+          -o-transition: all .2s ease;
+          transition: all .2s ease; }
         .content-section .project-container .info-container .info-description a:hover {
           text-decoration: none;
           background-color: white; }
@@ -152,7 +163,10 @@ body {
       .content-section .project-container .image-container img {
         position: relative;
         width: 100%;
-        transition: all 0.2s ease; }
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease; }
       .content-section .project-container .image-container img:hover {
         box-shadow: 10px 10px 0px #333; }
 

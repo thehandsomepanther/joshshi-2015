@@ -49,7 +49,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     }, 0);
 
     $('.josh-shi-makes').click(function() {
-      $('.design').addClass('active');
+
     });
 
     $('.dropdown-wrapper').delegate('.dropdown .active', 'mouseover',
@@ -59,8 +59,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         } else {
           previous_active = this;
         }
-
-        console.log(this);
         showDropdown();
       });
 
@@ -72,16 +70,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     $('.dropdown').mouseleave(function() {
       hideDropdown();
       $(previous_active).addClass('active');
-    });
-
-    $('.plus-glyph').click(function() {
-      if (bio) {
-        leaveBio();
-      } else {
-        enterBio();
-      }
-
-      bio = !bio;
     });
 
     $('.bio').click(function() {
@@ -147,29 +135,5 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         previous_active = that;
       }
     });
-  }
-
-  function enterBio() {
-    $('.bio-section').animate({
-      left: "0%"
-    }, 200);
-
-    $('.plus-glyph').css('color', 'white');
-    $('.plus-glyph').css('transform', 'rotate(45deg)');
-
-    $('.bio-section').css('position', 'absolute');
-    console.log('enter');
-  }
-
-  function leaveBio() {
-    $('.bio-section').animate({
-      left: "95%"
-    }, 200);
-
-    $('.plus-glyph').css('color', '#FFAB40');
-    $('.plus-glyph').css('transform', 'rotate(0deg)');
-
-    $('.bio-section').css('position', 'fixed');
-    console.log('leave')
   }
 }
