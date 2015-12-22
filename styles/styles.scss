@@ -158,7 +158,6 @@ body {
     padding-top: 2%;
     font-size: 45px;
     display: inline-block;
-    border-bottom: 16px solid white;
     letter-spacing: -.08rem;
 
     a {
@@ -166,6 +165,26 @@ body {
       color: white;
       text-decoration: none;
       @include anim;
+      padding-left: 4px;
+      padding-right: 4px;
+      border-bottom: 16px solid white;
+    }
+
+    a:hover{
+      background-color: white;
+      text-decoration: none;
+    }
+
+    .bio-header:hover {
+      color: $bio-color;
+    }
+
+    .code-header:hover {
+      color: $code-color;
+    }
+
+    .design-header:hover {
+      color: $design-color;
     }
   }
 
@@ -212,10 +231,6 @@ body {
           text-decoration: underline;
         }
 
-      }
-
-      .header-bio:after {
-        content: "\21AF";
       }
 
       .header-left:after{

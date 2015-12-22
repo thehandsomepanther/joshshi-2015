@@ -91,7 +91,6 @@ body {
     padding-top: 2%;
     font-size: 45px;
     display: inline-block;
-    border-bottom: 16px solid white;
     letter-spacing: -.08rem; }
     .content-section h1 a {
       position: relative;
@@ -100,7 +99,19 @@ body {
       -webkit-transition: all .2s ease;
       -moz-transition: all .2s ease;
       -o-transition: all .2s ease;
-      transition: all .2s ease; }
+      transition: all .2s ease;
+      padding-left: 4px;
+      padding-right: 4px;
+      border-bottom: 16px solid white; }
+    .content-section h1 a:hover {
+      background-color: white;
+      text-decoration: none; }
+    .content-section h1 .bio-header:hover {
+      color: #FFAB40; }
+    .content-section h1 .code-header:hover {
+      color: #2979FF; }
+    .content-section h1 .design-header:hover {
+      color: #F06292; }
   .content-section .project-container {
     padding-bottom: 10%;
     margin-left: 10%; }
@@ -132,8 +143,6 @@ body {
           text-decoration: none; }
         .content-section .project-container .info-container .info-header a:hover {
           text-decoration: underline; }
-      .content-section .project-container .info-container .header-bio:after {
-        content: "\21AF"; }
       .content-section .project-container .info-container .header-left:after {
         content: "\219D"; }
       .content-section .project-container .info-container .header-right {
