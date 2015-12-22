@@ -32,9 +32,9 @@ body {
     position: relative;
     /* Styles */
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     display: inline-block;
-    height: 60vh;
+    height: 300px;
     width: 155px;
     top: -114px; }
     @media screen and (max-width: 768px) {
@@ -50,7 +50,8 @@ body {
       overflow-x: visible; }
       .intro .dropdown-wrapper .dropdown li {
         display: inline-block;
-        width: 300px; }
+        width: 300px;
+        height: 58px; }
         .intro .dropdown-wrapper .dropdown li a {
           -webkit-transition: all .2s ease;
           -moz-transition: all .2s ease;

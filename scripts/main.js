@@ -32,12 +32,9 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     });
   }
 
-  var bio = false;
-  this.previous_active = 0;
-  var count = 0;
-
   $(document).ready(function() {
     previous_active = false;
+    var offsetNum = $('.dropdown li').outerHeight(true);
 
     $('html, body').animate({
       scrollTop: $('.intro').offset().top - .05 * $(window).height()
@@ -57,35 +54,31 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     $('.dropdown-wrapper')
       .delegate('.dropdown .active', 'mouseover',
         function() {
-          console.log(this)
-          if ($(".dropdown .active").length > 1) {
-
-          } else {
+          if ($(".dropdown .active").length == 1) {
             previous_active = this;
-            console.log(previous_active)
             showDropdown($("li").index(this));
           }
       })
       .delegate('.bio.active', 'click',
         function() {
-          shiftDropdown(1);
+          shiftDropdown(1, offsetNum);
           $(this).addClass('active');
           $('body').scrollTo(0);
       })
       .delegate('.things.active', 'click',
         function() {
-          shiftDropdown(2);
+          shiftDropdown(2, offsetNum);
           $(this).addClass('active');
       })
       .delegate('.code.active', 'click',
         function() {
-          shiftDropdown(3);
+          shiftDropdown(3, offsetNum);
           $(this).addClass('active');
           $('body').scrollTo($('.code-section').offset().top - 50);
       })
       .delegate('.design.active', 'click',
         function() {
-          shiftDropdown(4);
+          shiftDropdown(4, offsetNum);
           $(this).addClass('active');
           $('body').scrollTo($('.design-section').offset().top - 50);
       });
@@ -114,8 +107,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     });
   }
 
-  function shiftDropdown(i) {
-    topOffset = (i * -57) + "px";
+  function shiftDropdown(i, offsetNum) {
+    topOffset = (i * -offsetNum) + "px";
     $('.dropdown-wrapper').animate({
       top: topOffset
     }, 200);
