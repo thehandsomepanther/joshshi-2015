@@ -15,7 +15,6 @@
     transition: all .2s ease;
 }
 
-
 $primary-link: #1DE9B6;
 $secondary-link: #B2DFDB;
 
@@ -286,6 +285,32 @@ body {
     }
 
   }
+
+  .section-link {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    padding-bottom: 5px;
+
+    a {
+      font-family: $secondary-font-stack;
+      color: white;
+      text-decoration: none;
+      @include anim;
+      padding-left: 4px;
+      padding-right: 8px;
+    }
+
+    a:hover{
+      background-color: white;
+      text-decoration: none;
+      border-bottom: 5px solid white;
+    }
+
+    a:after {
+      content: "\219D";
+    }
+  }
 }
 
 .design-section {
@@ -295,6 +320,16 @@ body {
      a:hover {
        color: $design-color !important;
      }
+  }
+
+  .section-link {
+    a {
+      border-bottom: 4px solid $design-color;
+    }
+
+    a:hover {
+      color: $design-color;
+    }
   }
 }
 
@@ -306,6 +341,16 @@ body {
      a:hover {
        color: $code-color !important;
      }
+  }
+
+  .section-link {
+    a {
+      border-bottom: 4px solid $code-color;
+    }
+
+    a:hover {
+      color: $code-color;
+    }
   }
 }
 
@@ -324,6 +369,16 @@ body {
        a:hover {
          color: $bio-color;
        }
+    }
+  }
+
+  .section-link {
+    a {
+      border-bottom: 4px solid $bio-color;
+    }
+
+    a:hover {
+      color: $bio-color;
     }
   }
 }
