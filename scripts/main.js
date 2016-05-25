@@ -1,9 +1,3 @@
-$(document).ready(function() {
-  $('html, body').animate({
-    scrollTop: $('.intro').offset().top - .05 * $(window).height()
-  }, 0);
-});
-
 if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
 } else {
@@ -33,6 +27,8 @@ if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.u
   }
 
   $(document).ready(function() {
+
+
     previous_active = false;
     var offsetNum = $('.dropdown li').outerHeight(true);
 
@@ -82,6 +78,15 @@ if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.u
           $(this).addClass('active');
           $('body').scrollTo($('.design-section').offset().top - 50);
       });
+
+      setTimeout(function() {
+        $('.dropdown .active').mouseover();
+      }, 200)
+
+      setTimeout(function() {
+        $('.dropdown .active').mouseleave();
+      }, 1000)
+      
 
   });
 
